@@ -442,6 +442,10 @@ function handle_equipping_gear(playerStatus, petStatus)
     -- init a new eventArgs
     local eventArgs = {handled = false}
 
+    if user_handle_equipping_gear then
+        user_handle_equipping_gear(playerStatus, eventArgs)
+    end
+
     -- Allow jobs to override this code
     if job_handle_equipping_gear then
         job_handle_equipping_gear(playerStatus, eventArgs)

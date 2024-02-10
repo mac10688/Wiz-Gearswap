@@ -271,6 +271,10 @@ function handle_update(cmdParams)
         job_update(cmdParams, eventArgs)
     end
 
+    if user_update then
+        user_update(cmdParams, eventArgs)
+    end
+
     if not eventArgs.handled then
         if handle_equipping_gear then
             handle_equipping_gear(player.status)
@@ -386,7 +390,7 @@ function display_current_state()
             msg = msg .. ', Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
         end
         
-        if state.Kiting.value == true then
+        if state.Kiting.value then
             msg = msg .. ', Kiting'
         end
 

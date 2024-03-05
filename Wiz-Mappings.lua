@@ -158,7 +158,7 @@ spell_maps = {
     ['Barsilence']='BarStatus',['Barsilencera']='BarStatus',['Barpetrify']='BarStatus',['Barpetra']='BarStatus',['Barpoison']='BarStatus',['Barpoisonra']='BarStatus',
     ['Barblind']='BarStatus',['Barblindra']='BarStatus',['Barsleep']='BarStatus',['Barsleepra']='BarStatus',
     ['Boost-AGI']='BoostStat',['Boost-CHR']='BoostStat',['Boost-DEX']='BoostStat',['Boost-INT']='BoostStat',['Boost-MND']='BoostStat',['Boost-STR']='BoostStat',['Boost-VIT']='BoostStat',
-    ['Gain-AGI']='BoostStat',['Gain-CHR']='BoostStat',['Gain-DEX']='BoostStat',['Gain-INT']='BoostStat',['Gain-MND']='BoostStat',['Gain-STR']='BoostStat',['Gain-VIT']='BoostStat',
+    ['Gain-AGI']='GainStat',['Gain-CHR']='GainStat',['Gain-DEX']='GainStat',['Gain-INT']='GainStat',['Gain-MND']='GainStat',['Gain-STR']='GainStat',['Gain-VIT']='GainStat',
     ['Raise']='Raise',['Raise II']='Raise',['Raise III']='Raise',['Arise']='Raise',
     ['Reraise']='Reraise',['Reraise II']='Reraise',['Reraise III']='Reraise',['Reraise IV']='Reraise',
     ['Dia']='Dia',['Dia II']='Dia',['Dia III']='Dia',['Diaga']='Dia',['Diaga II']='Dia',

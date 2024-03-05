@@ -215,7 +215,12 @@ function handle_toggle(cmdParams)
             job_state_change(descrip, newVal, oldVal)
         end
 
-        add_to_chat(122,descrip..' is now '..state_var.current..'.')
+        if state_var.current == 'on' then
+            add_to_chat(30, descrip..' is now '..state_var.current..'.')
+        else
+            add_to_chat(28, descrip..' is now '..state_var.current..'.')
+        end
+        
         handle_update({'auto'})
     else
         add_to_chat(123,'Mote-Libs: Toggle: Unknown field ['..cmdParams[1]..']')
@@ -248,7 +253,7 @@ function handle_unset(cmdParams)
             job_state_change(descrip, newVal, oldVal)
         end
 
-        add_to_chat(122,descrip..' is now '..state_var.current..'.')
+        add_to_chat(144,descrip..' is now '..state_var.current..'.')
         handle_update({'auto'})
     else
         add_to_chat(123,'Mote-Libs: Toggle: Unknown field ['..cmdParams[1]..']')
@@ -291,10 +296,10 @@ function handle_weaponlock(cmdParams)
         state.WeaponLock.value = not state.WeaponLock.value
         if state.WeaponLock.value then
             disable('main', 'sub', 'ranged')
-            add_to_chat(122, 'Locking main, sub, ranged')
+            add_to_chat(30, 'Locking main, sub, ranged')
         else
             enable('main', 'sub', 'ranged')
-            add_to_chat(122, 'Unlocking main, sub, ranged')
+            add_to_chat(28, 'Unlocking main, sub, ranged')
         end
     end
 end

@@ -25,6 +25,32 @@ function define_global_sets()
 	gear.default.obi_ring = "Strendu Ring"
 	gear.default.fastcast_staff = ""
 	gear.default.recast_staff = ""
+
+	jse = {}
+
+	jse.artifact = {}
+	jse.artifact.head = {}
+	jse.artifact.body = {}
+	jse.artifact.hands = {}
+	jse.artifact.legs = {}
+	jse.artifact.feet = {}
+
+	jse.relic = {}
+	jse.relic.head = {}
+	jse.relic.body = {}
+	jse.relic.hands = {}
+	jse.relic.legs = {}
+	jse.relic.feet = {}
+
+	jse.empyrean = {}
+	jse.empyrean.head = {}
+	jse.empyrean.body = {}
+	jse.empyrean.hands = {}
+	jse.empyrean.legs = {}
+	jse.empyrean.feet = {}
+
+	jse.earring = {}
+
 end
 
 -------------------------------------------------------------------------------------------------------------------

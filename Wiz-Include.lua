@@ -596,7 +596,6 @@ function get_melee_set()
     end
 
     meleeSet = apply_defense(meleeSet)
-    meleeSet = apply_kiting(meleeSet)
 
     if customize_melee_set then
         meleeSet = customize_melee_set(meleeSet)

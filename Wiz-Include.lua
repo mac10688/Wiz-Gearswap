@@ -124,7 +124,6 @@ function init_include()
     sets.engaged = {}
     sets.defense = {}
     sets.buff = {}
-    
 
     gear = {}
     gear.default = {}
@@ -338,7 +337,7 @@ end
 
 function default_aftercast(spell, spellMap)
     if not pet_midaction() then
-        handle_equipping_gear(player.status)
+        handle_equipping_gear(player.status, pet.status)
     end
 end
 
@@ -347,7 +346,7 @@ function default_pet_midcast(spell, spellMap)
 end
 
 function default_pet_aftercast(spell, spellMap)
-    handle_equipping_gear(player.status)
+    handle_equipping_gear(player.status, pet.status)
 end
 
 --------------------------------------
@@ -1022,7 +1021,7 @@ function status_change(newStatus, oldStatus)
 
     -- Handle equipping default gear if the job didn't mark this as handled.
     if not eventArgs.handled then
-        handle_equipping_gear(newStatus)
+        handle_equipping_gear(newStatus, pet.status)
         display_breadcrumbs()
     end
 end
@@ -1067,7 +1066,11 @@ function pet_change(pet, gain)
 
     -- Equip default gear if not handled by the job.
     if not eventArgs.handled then
-        handle_equipping_gear(player.status)
+        if gain then
+            handle_equipping_gear(player.status, "Idle")
+        else
+            handle_equipping_gear(player.status)
+        end
     end
 end
 
@@ -1083,6 +1086,9 @@ function pet_status_change(newStatus, oldStatus)
     -- Allow jobs to override this code
     if job_pet_status_change then
         job_pet_status_change(newStatus, oldStatus, eventArgs)
+    end
+    if newStatus == "Idle" or newStatus == "Engaged" then
+        handle_equipping_gear(player.status, newStatus)
     end
 end
 

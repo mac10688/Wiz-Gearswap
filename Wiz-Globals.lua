@@ -16,16 +16,6 @@
 -------------------------------------------------------------------------------------------------------------------
 
 function define_global_sets()
-
-	-- Default items for utility gear values.
-	gear.default.weaponskill_neck = "Asperity Necklace"
-	gear.default.weaponskill_waist = "Caudata Belt"
-	gear.default.obi_waist = "Cognition Belt"
-	gear.default.obi_back = "Toro Cape"
-	gear.default.obi_ring = "Strendu Ring"
-	gear.default.fastcast_staff = ""
-	gear.default.recast_staff = ""
-
 	jse = {}
 
 	jse.artifact = {}
@@ -50,7 +40,6 @@ function define_global_sets()
 	jse.empyrean.feet = {}
 
 	jse.earring = {}
-
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -60,9 +49,6 @@ end
 
 -- Function to bind GearSwap binds when loading a GS script.
 function global_on_load()
-		
-	
-	-- send_command('bind @f9 gs c cycle WeaponskillMode')
 	send_command('bind f9 gs c reset DefenseMode')
 	send_command('bind ^f9 gs c cycle PhysicalDefenseMode')
 	send_command('bind !f9 gs c cycle MagicalDefenseMode')
@@ -75,6 +61,7 @@ function global_on_load()
 	send_command('bind ^f11 gs c cycle CastingMode')
 	send_command('bind !f11 gs c cycle RangedMode')
 	send_command('bind f12 gs c update user')	
+	send_command('bind ^f12 gs c cycle WeaponskillMode')
 	send_command('bind ^k gs c toggle Kiting')	
 	send_command('bind ^l gs c weaponlock')
 end
@@ -91,6 +78,7 @@ function global_on_unload()
 	send_command('unbind @f10')
 	send_command('unbind f11')
 	send_command('unbind ^f11')
+	send_command('unbind ^f12')
 	send_command('unbind !f11')
 	send_command('unbind f12')
 	send_command('unbind ^f12')

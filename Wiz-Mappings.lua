@@ -148,7 +148,7 @@ ranged_weaponskills = data.weaponskills.ranged
 spell_maps = {
     ['Cure']='Cure',                                      ['Cure II']='Cure',                       ['Cure III']='Cure',                    ['Cure IV']='Cure',               ['Cure V']='Cure',                    ['Cure VI']='Cure',               ['Full Cure']='Cure',            
     ['Cura']='Curaga',                                    ['Cura II']='Curaga',                     ['Cura III']='Curaga',                 
-    ['Curaga']='Curaga',                                  ['Curaga II']='Curaga',                   ['Curaga III']='Curaga',                ['Curaga IV']='Curaga',           ['Curaga V']='Curaga',               
+    ['Curaga']='Curaga',                                  ['Curaga II']='Curaga',                   ['Curaga III']='Curaga',                ['Curaga IV']='Curaga',           ['Curaga V']='Curaga',
     -- Status Removal doesn't include Esuna or Sacrifice, since they work differently than the rest
     ['Poisona']='StatusRemoval',                          ['Paralyna']='StatusRemoval',             ['Silena']='StatusRemoval',             ['Blindna']='StatusRemoval',      ['Cursna']='StatusRemoval',          
     ['Stona']='StatusRemoval',                            ['Viruna']='StatusRemoval',               ['Erase']='StatusRemoval',             
@@ -158,7 +158,8 @@ spell_maps = {
     ['Barsilence']='BarStatus',                           ['Barsilencera']='BarStatus',             ['Barpetrify']='BarStatus',             ['Barpetra']='BarStatus',         ['Barpoison']='BarStatus',            ['Barpoisonra']='BarStatus',     
     ['Barblind']='BarStatus',                             ['Barblindra']='BarStatus',               ['Barsleep']='BarStatus',               ['Barsleepra']='BarStatus',      
     ['Boost-AGI']='BoostStat',                            ['Boost-CHR']='BoostStat',                ['Boost-DEX']='BoostStat',              ['Boost-INT']='BoostStat',        ['Boost-MND']='BoostStat',            ['Boost-STR']='BoostStat',        ['Boost-VIT']='BoostStat',       
-    ['Gain-AGI']='GainStat',                              ['Gain-CHR']='GainStat',                  ['Gain-DEX']='GainStat',                ['Gain-INT']='GainStat',          ['Gain-MND']='GainStat',              ['Gain-STR']='GainStat',          ['Gain-VIT']='GainStat',         
+    ['Gain-AGI']='GainStat',                              ['Gain-CHR']='GainStat',                  ['Gain-DEX']='GainStat',                ['Gain-INT']='GainStat',          ['Gain-MND']='GainStat',              ['Gain-STR']='GainStat',          ['Gain-VIT']='GainStat',
+    ['Phalanx']='Phalanx',                                ['Phalanx II'] = 'Phalanx',
     ['Raise']='Raise',                                    ['Raise II']='Raise',                     ['Raise III']='Raise',                  ['Arise']='Raise',               
     ['Reraise']='Reraise',                                ['Reraise II']='Reraise',                 ['Reraise III']='Reraise',              ['Reraise IV']='Reraise',        
     ['Dia']='Dia',                                        ['Dia II']='Dia',                         ['Dia III']='Dia',                      ['Diaga']='Dia',                  ['Diaga II']='Dia',                  
